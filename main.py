@@ -41,11 +41,11 @@ class Snake:
                 if evenement.type == pygame.QUIT:# permet de quitter pygame
                     sys.exit()
                 if evenement.type == pygame.KEYDOWN:
-                    if evenement.key == pygame.K_RETURN:
+                    if evenement.key == pygame.K_SPACE:
                         self.ecran_du_debut = False
                 self.ecran.fill((0,0,0))#met l'ecran du fond en noir
                 self.ecran.blit(self.image_titre,(300,50,100,50))
-                self.creer_message('moyenne','Appuyer sur Enter pour commencer', (500, 650, 200, 5),
+                self.creer_message('moyenne','Appuyer sur Espace pour commencer', (500, 650, 200, 5),
                                     (255, 255, 255))
                 pygame.display.flip()
         while self.jeu_encours == True :
@@ -96,8 +96,8 @@ class Snake:
             la_tete_du_serpent.append(self.serpent_position_y)
             self.positions_serpent.append(la_tete_du_serpent)
             # condition pour resoudre le probleme des positions du serpent avec la taille du serpent
-            if len(self.positions_serpent) > self.taille_du_serpent:
-                self.positions_serpent.pop(0)
+            if len(self.positions_serpent) > self.taille_du_serpent:# des que le taille de la position du serpent > a la taille
+                self.positions_serpent.pop(0)# supprime le premier element 
             self.affichage()
             self.se_mord_la_queue(la_tete_du_serpent)
             self.creer_message('grande','Snake', (590, 10, 100, 50), (255, 255, 255), )
@@ -114,7 +114,6 @@ class Snake:
         # faire bouger le serpent
         self.serpent_position_x += self.serpent_direction_x  # faire bouger le serpent a gauche ou a droite
         self.serpent_position_y += self.serpent_direction_y  # faire bouger le serpent en haut ou en bas
-        # print(self.serpent_position_x,self.serpent_position_y)
     def affichage(self):
         self.ecran.fill((0, 0, 0))  # attriubue la couleur noir a l'ecran
         self.ecran.blit(self.image_tete_serpent,(self.serpent_position_x,self.serpent_position_y,self.serpent_corps,self.serpent_corps))
@@ -124,7 +123,7 @@ class Snake:
         self.afficher_Serpent()
     def afficher_Serpent(self):
         # afficher les autres parties du serpent
-        for partie_du_serpent in self.positions_serpent[:-1]:#crée une boucle qui prend tous les element sauf le dernier 
+        for partie_du_serpent in self.positions_serpent[:-1]:#crée une boucle qui prend tous les element sauf le dernier( la tete)
             pygame.draw.rect(self.ecran, (0, 255, 0),(partie_du_serpent[0], partie_du_serpent[1], self.serpent_corps, self.serpent_corps))
     def se_mord_la_queue(self,tete_serpent):
         # le seprent se mord
@@ -134,10 +133,10 @@ class Snake:
 # creer une fonction qui permet d'afficher des messages
     def creer_message(self,font,message,message_rectangle,couleur):
         if font == 'moyenne':
-            font = pygame.font.SysFont('Lato',30,False)
+            font = pygame.font.SysFont('Corbel',30,False)#definit la police d'ecriture
         elif font == 'grande':
-            font = pygame.font.SysFont('Lato',40,True)
-        message = font.render(message,True,couleur)
+            font = pygame.font.SysFont('Corbel',40,True)
+        message = font.render(message,True,couleur)#premet d'afficher le text
         self.ecran.blit(message,message_rectangle)
 if __name__ == '__main__':
     pygame.init()# initie pygame
