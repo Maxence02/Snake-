@@ -104,7 +104,7 @@ class Snake:
             self.creer_message('grande','{}'.format(str(self.score)), (640, 50, 50, 50), (255, 255, 255), )
             # afficher les limites
             self.creer_limites()
-            self.clock.tick(30)
+            self.clock.tick(20)
             pygame.display.flip()# mettre a jour l'ecran
     # creer une fonction qui permet de creer un rectangle qui representera les limites du jeu (dimension 100,100,600,500),3
     def creer_limites(self):
