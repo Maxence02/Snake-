@@ -4,6 +4,6 @@ sauf pour les mouvement de mon serpent ou j'ai du chercher sur le doc de pygame.
 J'ai par le suite crée une limite a mon terrain de jeu le doc de pygame ma encore était d'une grande aide.(06/01/2022).
 J'ai crée par la suite les apparitions des pommmes et le fait que quand un serpent en mange une il grandis, cette partie etait plutot simple, et la foction qui permet de 
 tuer le serpnd quand il passe sur lui meme qui était aussi pas très compliquée.(07/01/2022).
-pour afficher tous les messages je ne savais vraiment pas comment faire j'ai chercher sur le doc de pygame comment faire.
-Ce projet était assez au debut ne connaissant pas trop la bibliothèque pygame mais j'ai appris a mieux utiliser pygame et je me suis aussi beaucoup aider des forums pour apprendre
-de nouvelles choses.
+pour afficher tous les messages je ne savais vraiment pas comment faire j'ai chercher sur le doc de pygame comment faire.(09/01/2022).
+Ce projet était assez au debut ne connaissant pas trop la bibliothèque pygame mais j'ai appris a mieux utiliser pygame et je me suis aussi beaucoup aider des forums pour 
+apprendrede nouvelles choses.
