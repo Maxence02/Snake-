@@ -1,2 +1,5 @@
 J'ai commencer par crée une fenetre de jeu pour mon Snake il m'a fallu aller sur le pygame docs (https://www.pygame.org/docs/) et j'ai trouvé comment faire. (02/01/2022).
-J'ai crée ensuite mon serpent et la tête de mon serpent je n'ai pas rencontré de réel grosse dificulté toutes les petites dificultés j'ai trouvé reponses sur des forums. 
+J'ai crée ensuite mon serpent et la tête de mon serpent je n'ai pas rencontré de réel grosse dificulté toutes les petites dificultés j'ai trouvé reponses sur des forums
+sauf pour les mouvement de mon serpent ou j'ai du chercher sur le doc de pygame. (05/01/2022).
+J'ai par le suite crée une limite a mon terrain de jeu le doc de pygame ma encore était d'une grande aide.(06/01/2022).
+J'ai crée par la suite les apparitions des pommmes et le fait que quand un serpent en mange une il grandis, cette partie etait plutot simple
