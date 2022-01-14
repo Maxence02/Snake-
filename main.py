@@ -51,7 +51,6 @@ class Snake:
         while self.jeu_encours == True :
             # tant que le jeu est en cours 
             for evenement in pygame.event.get():# verifier les evenements lorsque le jeu est en cours
-                #print(evenement)
                 if evenement.type == pygame.QUIT:
                     sys.exit()
                 # creer les evenements qui permettent de bouger le serpent
@@ -60,22 +59,18 @@ class Snake:
                         # lorsque l'on presse la touche 'fleche droite'
                         self.serpent_direction_x = 10
                         self.serpent_direction_y = 0
-                        #print('Droite')
                     if evenement.key == pygame.K_LEFT:
                         # lorsque l'on presse la touche 'fleche gauche'
                         self.serpent_direction_x = -10
                         self.serpent_direction_y = 0
-                        #print('LEFT')
                     if evenement.key == pygame.K_DOWN:
                         # lorsque l'on presse la touche 'fleche vers le  bas'
                         self.serpent_direction_y = 10
                         self.serpent_direction_x = 0
-                        #print('En bas')
                     if evenement.key == pygame.K_UP:
                         # lorsque l'on presse la touche 'fleche vers le haut'
                         self.serpent_direction_y = -10
                         self.serpent_direction_x = 0
-                        #print('En haut ')
             if self.serpent_position_x <= 100 or self.serpent_position_x >= 1170 \
                 or self.serpent_position_y <= 100 or self.serpent_position_y >= 750 :
                 # si la position du serpent depasse les limites alors le jeu s'arrete
